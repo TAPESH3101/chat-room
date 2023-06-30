@@ -69,7 +69,8 @@ ios.on('connection', function(socket){
 			}
 	});
 
-	// sending online members list
+
+	// sending online members lists
 	socket.on('get-online-members', function(data){
 		var online_member = [];
 		i = Object.keys(nickname);
@@ -83,7 +84,8 @@ ios.on('connection', function(socket){
 		ios.sockets.emit('online-members', online_member);		
 	});
 
-	// sending new message
+
+	// sending new messages
 	socket.on('send-message', function(data, callback){
 		if (nickname[data.username]) {
 			if(data.hasMsg){
