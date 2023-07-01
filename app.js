@@ -124,7 +124,8 @@ ios.on('connection', function(socket){
    	});
 });
 
-// route for uploading images asynchronously
+
+// route for uploading images asynchronously.
 app.post('/v1/uploadImage',function (req, res){
 	var imgdatetimenow = Date.now();
 	var form = new formidable.IncomingForm({
