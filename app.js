@@ -290,7 +290,7 @@ app.post('/v1/getfile', function(req, res){
                var index = files_array.indexOf(req_file_data);
                files_array.splice(index,1);           
         }else{
-			
+
         	// CASE 3 : File Exist and returned serverfilename in response
             var fileinfo = {
             	isExpired : false, 
@@ -299,6 +299,7 @@ app.post('/v1/getfile', function(req, res){
             res.send(fileinfo);
         }
     }else{  
+		
     		// CASE 4 : File Doesn't Exists.       
 	    	var deletedfileinfo = { 
 	                isExpired : true,
