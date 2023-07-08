@@ -322,6 +322,8 @@ function bytesToSize(bytes) {
     if (i == 0) return bytes + ' ' + sizes[i]; 
     return (bytes / Math.pow(1024, i)).toFixed(2) + ' ' + sizes[i];
 };
+
+
 //get file name from server file path
 function baseName(str)
 {
